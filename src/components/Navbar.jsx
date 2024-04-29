@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Link, NavLink } from "react-router-dom";
 
 import { styles } from "../styles";
@@ -9,17 +9,22 @@ import toast from "react-hot-toast";
 const Navbar = () => {
   const [active, setActive] = useState("");
   const [toggle, setToggle] = useState(false);
+
   return (
     <nav
-      className={`${styles.paddingX} w-full flex items-center py-5 fixed top-0 z-20 bg-primary`}
+      className={`${styles.paddingX} w-full flex items-center py-5 fixed top-0 z-20 bg-primary  rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-50 `}
     >
       <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
         <Link
           to="/"
-          className="flex items-center gap-2"
+          className="flex items-center gap-2 cursor-pointer"
           onClick={() => {
             setActive("");
-            window.scrollTo(0, 0);
+            window.scrollTo({
+              top: 0,
+              left: 0,
+              behavior: "smooth",
+            });
           }}
         >
           <img src={logo} alt="logo" className="w-9 h-9 object-contain" />
@@ -30,16 +35,17 @@ const Navbar = () => {
         <ul className="list-none hidden sm:flex flex-row gap-10">
           {navLinks.map((nav) => (
             <li key={nav.id}>
-              <NavLink
-                to={`#${nav.id}`}
+              <a
+                href={`#${nav.id}`}
                 className={`${
                   active === nav.title ? "text-white" : "text-secondary"
                 } hover:text-white text-[20px]  cursor-pointer`}
-                activeClassname="text-accent"
-                onClick={() => setActive(nav.title)}
+                onClick={() => {
+                  setActive(nav.title);
+                }}
               >
                 {nav.title}
-              </NavLink>
+              </a>
             </li>
           ))}
         </ul>

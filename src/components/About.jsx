@@ -47,12 +47,17 @@ const About = () => {
         variants={fadeIn("", "", 0.1, 1)}
         className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
       >
-        I'm a software engineer with a passion for creating interactive web
+        I'm a Developer with a passion for creating interactive web
         applications. I specialize in front-end development and have experience
-        working with modern JavaScript frameworks like React, Angular, and Vue.
-        I also have experience working with back-end technologies like Node.js,
-        Express, and MongoDB. I'm always looking to learn new technologies and
-        improve my skills as a developer.
+        working with modern JavaScript frameworks like React, Next js, I also
+        have experience working with back-end technologies like Node.js,
+        Express, REST API and Databases like MongoDB, SQL, PostgreSQL. also have
+        knowledge of build system like monorepo and turborepo. I have a good of
+        tools also like vscode, postman. I have experience working with version
+        control systems like Git and have worked with
+        <br />
+        I'm always looking to learn new technologies and improve my skills as a
+        developer.
       </motion.p>
       <div className="mt-20 flex flex-wrap gap-10">
         {services.map((service, index) => (

@@ -1,17 +1,66 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
-import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
+import {
+  Environment,
+  Float,
+  OrbitControls,
+  Preload,
+  useGLTF,
+} from "@react-three/drei";
 import CanvasLoader from "../Loader";
 
-const Earth = () => {
-  const earth = useGLTF("./planet/scene.gltf");
+const Earth = ({ isMobile }) => {
+  const earth = useGLTF("./space1/scene.gltf");
   return (
-    <primitive object={earth.scene} scale={2.5} position-y={0} rotation-y={0} />
+    <mesh>
+      <hemisphereLight intensity={2} groundColor="black" />
+      <spotLight
+        // position={[0, -10, 10]}
+        angle={1}
+        penumbra={1}
+        intensity={5}
+        castShadow
+        shadow-mapSize={1024}
+      />
+      <pointLight intensity={10} />
+      <primitive
+        className=""
+        object={earth.scene}
+        scale={0.0002}
+        position={isMobile ? [-1.4, 1.1, 1.9] : [-3, -0.1, 5]}
+        rotation={isMobile ? [-0.02, -0.4, -0.6] : [-0.02, -0.4, -0.5]}
+      />
+    </mesh>
   );
 };
 
+useGLTF.preload("./space1/scene.gltf");
+
 const EarthCanvas = () => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    // Add a listener for changes to the screen size
+    const mediaQuery = window.matchMedia("(max-width: 600px)");
+
+    // Set the initial value of the `isMobile` state variable
+    setIsMobile(mediaQuery.matches);
+
+    // Define a callback function to handle changes to the media query
+    const handleMediaQueryChange = (event) => {
+      setIsMobile(event.matches);
+    };
+
+    // Add the callback function as a listener for changes to the media query
+    mediaQuery.addEventListener("change", handleMediaQueryChange);
+
+    // Remove the listener when the component is unmounted
+    return () => {
+      mediaQuery.removeEventListener("change", handleMediaQueryChange);
+    };
+  }, []);
+
   return (
     <Canvas
       shadows
@@ -23,13 +72,15 @@ const EarthCanvas = () => {
       <Suspense fallback={<CanvasLoader />}>
         <OrbitControls
           enableZoom={false}
-          autoRotate
-          enableRotate
-          autoRotateSpeed={1.5}
+          // autoRotate
+          // enableRotate
+          // autoRotateSpeed={1.5}
+
           maxPolarAngle={Math.PI / 2}
           minPolarAngle={Math.PI / 2}
         />
-        <Earth />
+        <Earth isMobile={isMobile} />
+        <Environment preset="night" />
       </Suspense>
 
       <Preload all />

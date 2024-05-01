@@ -1,6 +1,5 @@
 import {
   mobile,
-  backend,
   creator,
   web,
   javascript,
@@ -23,7 +22,42 @@ import {
   jobit,
   tripguide,
   threejs,
+  cpp,
+  python,
+  linux,
+  mysql,
+  postgresq,
+  nextjs,
+  postman,
+  frontend,
+  backend,
+  cv,
+  githuba,
+  linkedin,
+  linkedina,
+  linkedinb,
+  resume,
 } from "../assets";
+
+export const resumeLink = resume;
+
+export const social = [
+  {
+    name: "Github",
+    icon: githuba,
+    link: "https://github.com/grsendha",
+  },
+  {
+    name: "Linkedin",
+    icon: linkedinb,
+    link: "https://www.linkedin.com/in/gyanaranjan-sendha",
+  },
+  {
+    name: "Resume",
+    icon: cv,
+    link: resume,
+  },
+];
 
 export const navLinks = [
   {
@@ -35,6 +69,10 @@ export const navLinks = [
     title: "Work",
   },
   {
+    id: "project",
+    title: "Projects",
+  },
+  {
     id: "contact",
     title: "Contact",
   },
@@ -43,27 +81,19 @@ export const navLinks = [
 const services = [
   {
     title: "Frontend Developer",
-    icon: web,
+    icon: frontend,
   },
   {
     title: "Backend Developer",
-    icon: mobile,
+    icon: backend,
   },
   {
     title: "C++ Developer",
-    icon: backend,
+    icon: cpp,
   },
 ];
 
-const technologies = [
-  {
-    name: "HTML 5",
-    icon: html,
-  },
-  {
-    name: "CSS 3",
-    icon: css,
-  },
+const languages = [
   {
     name: "JavaScript",
     icon: javascript,
@@ -72,6 +102,16 @@ const technologies = [
     name: "TypeScript",
     icon: typescript,
   },
+  {
+    name: "C++",
+    icon: cpp,
+  },
+  {
+    name: "python",
+    icon: python,
+  },
+];
+const frameworks = [
   {
     name: "React JS",
     icon: reactjs,
@@ -85,20 +125,42 @@ const technologies = [
     icon: tailwind,
   },
   {
+    name: "Next JS",
+    icon: nextjs,
+  },
+];
+const tools = [
+  {
     name: "Node JS",
     icon: nodejs,
   },
+  {
+    name: "git",
+    icon: git,
+  },
+  {
+    name: "Linux",
+    icon: linux,
+  },
+];
+const databases = [
   {
     name: "MongoDB",
     icon: mongodb,
   },
   {
-    name: "Three JS",
-    icon: threejs,
+    name: "My SQL",
+    icon: mysql,
+  },
+];
+const technologies = [
+  {
+    name: "HTML 5",
+    icon: html,
   },
   {
-    name: "git",
-    icon: git,
+    name: "CSS 3",
+    icon: css,
   },
 ];
 
@@ -210,4 +272,13 @@ const projects = [
   },
 ];
 
-export { services, technologies, experiences, testimonials, projects };
+export {
+  services,
+  databases,
+  tools,
+  frameworks,
+  languages,
+  experiences,
+  testimonials,
+  projects,
+};

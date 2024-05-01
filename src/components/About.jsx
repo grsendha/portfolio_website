@@ -6,6 +6,7 @@ import { services } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
 import { SectionWrapper } from "../hoc/index";
 import ScrollIcon from "./ScrollIcon";
+import { social } from "../constants";
 
 const ServiceCard = ({ index, title, icon }) => (
   <Tilt className="xs:w-[250px] w-full">
@@ -59,12 +60,12 @@ const About = () => {
         I'm always looking to learn new technologies and improve my skills as a
         developer.
       </motion.p>
+
       <div className="mt-20 flex flex-wrap gap-10">
         {services.map((service, index) => (
           <ServiceCard key={service.title} index={index} {...service} />
         ))}
       </div>
-      <ScrollIcon id="work" />
     </>
   );
 };

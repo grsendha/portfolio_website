@@ -1,11 +1,13 @@
 import logo from "./logo.svg";
-import backend from "./backend.png";
+// import backend from "./backend.png";
 import creator from "./creator.png";
 import mobile from "./mobile.png";
 import web from "./web.png";
 import github from "./github.png";
 import menu from "./menu.svg";
 import close from "./close.svg";
+import frontend from "./fe.png";
+import backend from "./be.png";
 
 import css from "./tech/css.png";
 import docker from "./tech/docker.png";
@@ -20,6 +22,13 @@ import redux from "./tech/redux.png";
 import tailwind from "./tech/tailwind.png";
 import typescript from "./tech/typescript.png";
 import threejs from "./tech/threejs.svg";
+import cpp from "./tech/cpp.png";
+import python from "./tech/python.png";
+import linux from "./tech/linux.png";
+import mysql from "./tech/mysql.png";
+import postgresq from "./tech/postgresq.png";
+import nextjs from "./tech/nextjs.png";
+import postman from "./tech/postman.png";
 
 import meta from "./company/meta.png";
 import shopify from "./company/shopify.png";
@@ -30,9 +39,17 @@ import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
 
+import cv from "./cv.png";
+import githuba from "./github-a.svg";
+import linkedin from "./linkedin.svg";
+import linkedina from "./linkedin-a.svg";
+import linkedinb from "./linkedin-b.png";
+
+import resume from "./cv/gyanaranjan-resume.pdf";
+
 export {
+  resume,
   logo,
-  backend,
   creator,
   mobile,
   web,
@@ -59,4 +76,18 @@ export {
   carrent,
   jobit,
   tripguide,
+  cpp,
+  python,
+  linux,
+  mysql,
+  postgresq,
+  nextjs,
+  postman,
+  frontend,
+  backend,
+  cv,
+  githuba,
+  linkedin,
+  linkedina,
+  linkedinb,
 };

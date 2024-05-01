@@ -6,9 +6,15 @@ import { navLinks } from "../constants/index";
 import { logo, menu, close } from "../assets";
 import { SectionWrapper } from "../hoc";
 import toast from "react-hot-toast";
+import DropDown from "./DropDown";
+import { social } from "../constants";
 const Navbar = () => {
   const [active, setActive] = useState("");
   const [toggle, setToggle] = useState(false);
+
+  const handleClick = () => {
+    console.log("clicked");
+  };
 
   return (
     <nav
@@ -36,6 +42,7 @@ const Navbar = () => {
             Gyanaranjan.dev
           </p>
         </Link>
+
         <ul className="list-none hidden sm:flex flex-row gap-10">
           {navLinks.map((nav) => (
             <li key={nav.id}>
@@ -54,13 +61,15 @@ const Navbar = () => {
           ))}
         </ul>
         <div className="sm:hidden flex flex-1 justify-end items-center">
-          <img
+          <DropDown />
+          {/* <img
             src={toggle ? close : menu}
             alt="menu"
             className="w-6 h-6 cursor-pointe object-contain"
             onClick={() => setToggle(!toggle)}
-          />
-          <div
+          /> */}
+
+          {/* <div
             className={`${
               !toggle ? "hidden" : "flex"
             } p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl`}
@@ -83,7 +92,7 @@ const Navbar = () => {
                 </li>
               ))}
             </ul>
-          </div>
+          </div> */}
         </div>
       </div>
     </nav>

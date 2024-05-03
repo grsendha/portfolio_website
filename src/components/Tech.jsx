@@ -36,8 +36,7 @@ const Tech = () => {
       <div className="flex flex-row flex-wrap justify-start gap-10">
         {frameworks.map((tech, index) => (
           <div className="w-28 h-28" key={tech.name}>
-            <TechCard image={tech.icon} />
-            <p className="text-white text-center mt-2">{tech.name}</p>
+            <TechCard image={tech.icon} name={tech.name} />
           </div>
         ))}
       </div>
@@ -48,8 +47,7 @@ const Tech = () => {
       <div className="flex flex-row flex-wrap justify-start gap-10">
         {tools.map((tech, index) => (
           <div className="w-28 h-28" key={tech.name}>
-            <TechCard image={tech.icon} />
-            <p className="text-white text-center mt-2">{tech.name}</p>
+            <TechCard image={tech.icon} name={tech.name} />
           </div>
         ))}
       </div>
@@ -60,8 +58,7 @@ const Tech = () => {
       <div className="flex flex-row flex-wrap justify-start gap-10">
         {databases.map((tech, index) => (
           <div className="w-28 h-28" key={tech.name}>
-            <TechCard image={tech.icon} />
-            <p className="text-white text-center mt-2">{tech.name}</p>
+            <TechCard image={tech.icon} name={tech.name} />
           </div>
         ))}
       </div>

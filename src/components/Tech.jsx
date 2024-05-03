@@ -6,6 +6,7 @@ import { div } from "three/examples/jsm/nodes/Nodes.js";
 import { motion } from "framer-motion";
 import { textVariant, fadeIn } from "../utils/motion";
 import { styles } from "../styles";
+import TechCard from "./TechCard";
 const Tech = () => {
   return (
     <>
@@ -23,8 +24,8 @@ const Tech = () => {
       <div className="flex flex-row flex-wrap justify-start gap-10">
         {languages.map((tech, index) => (
           <div className="w-28 h-28" key={tech.name}>
-            <BallCanvas icon={tech.icon} color={tech.color} />
-            <p className="text-white text-center mt-2">{tech.name}</p>
+            <TechCard image={tech.icon} name={tech.name} />
+            {/* <p className="text-white text-center mt-2">{tech.name}</p> */}
           </div>
         ))}
       </div>
@@ -35,7 +36,7 @@ const Tech = () => {
       <div className="flex flex-row flex-wrap justify-start gap-10">
         {frameworks.map((tech, index) => (
           <div className="w-28 h-28" key={tech.name}>
-            <BallCanvas icon={tech.icon} color={tech.color} />
+            <TechCard image={tech.icon} />
             <p className="text-white text-center mt-2">{tech.name}</p>
           </div>
         ))}
@@ -47,7 +48,7 @@ const Tech = () => {
       <div className="flex flex-row flex-wrap justify-start gap-10">
         {tools.map((tech, index) => (
           <div className="w-28 h-28" key={tech.name}>
-            <BallCanvas icon={tech.icon} color={tech.color} />
+            <TechCard image={tech.icon} />
             <p className="text-white text-center mt-2">{tech.name}</p>
           </div>
         ))}
@@ -59,7 +60,7 @@ const Tech = () => {
       <div className="flex flex-row flex-wrap justify-start gap-10">
         {databases.map((tech, index) => (
           <div className="w-28 h-28" key={tech.name}>
-            <BallCanvas icon={tech.icon} color={tech.color} />
+            <TechCard image={tech.icon} />
             <p className="text-white text-center mt-2">{tech.name}</p>
           </div>
         ))}

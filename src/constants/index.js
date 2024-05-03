@@ -142,6 +142,10 @@ const tools = [
     name: "Linux",
     icon: linux,
   },
+  {
+    name: "Postman",
+    icon: postman,
+  },
 ];
 const databases = [
   {
@@ -151,6 +155,10 @@ const databases = [
   {
     name: "My SQL",
     icon: mysql,
+  },
+  {
+    name: "PostgreSQL",
+    icon: postgresq,
   },
 ];
 const technologies = [

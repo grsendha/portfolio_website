@@ -7,6 +7,7 @@ import { SectionWrapper } from "../hoc";
 import EarthCanvas from "./canvas/Earth";
 import { slideIn } from "../utils/motion";
 import toast from "react-hot-toast";
+import { div } from "three/examples/jsm/nodes/Nodes.js";
 
 //template_ncc9gxe
 
@@ -112,10 +113,13 @@ const Contact = () => {
               border-none font-medium"
             />
           </label>
-          <button
+          {/* <button
             type="submit"
-            className="bg-tertiary py-3 px-8 mt-5 outline-none w-full text-white font-medium rounded-xl shadow-md "
+            className=" py-3 px-8 mt-5 outline-none w-full text-white font-medium rounded-xl shadow-md "
           >
+            {loading ? "Sending..." : "Send Message"}
+          </button>{" "} */}
+          <button className="btn-class-name w-56 mt-4">
             {loading ? "Sending..." : "Send Message"}
           </button>
         </form>
@@ -126,6 +130,12 @@ const Contact = () => {
       ></motion.div>
     </div>
   );
+};
+
+const Button = () => {
+  const Button = () => {
+    return <button>Click me</button>;
+  };
 };
 
 export default SectionWrapper(Contact, "contact");

@@ -16,8 +16,8 @@ import { Toaster } from "react-hot-toast";
 const App = () => {
   return (
     <BrowserRouter>
-      <div className="relative z-0 bg-primary">
-        <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
+      <div className="relative z-0 bg-primary" style={{ opacity: 0.8 }}>
+        <div className="bg-hero-pattern  bg-cover bg-no-repeat bg-center">
           <Toaster />
           <Navbar />
           <Hero />

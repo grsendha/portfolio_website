@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Suspense } from "react";
 import {
   VerticalTimeline,
   VerticalTimelineElement,
@@ -52,7 +52,7 @@ const ExperienceCard = ({ experience }) => {
 
 const Experience = () => {
   return (
-    <>
+    <Suspense>
       <motion.div variants={textVariant()} className="mt-14">
         <p className={`${styles.sectionSubText} `}>What I have done so far</p>
         <h2 className={`${styles.sectionHeadText} `}>Work Experience.</h2>
@@ -68,7 +68,7 @@ const Experience = () => {
           ))}
         </VerticalTimeline>
       </div>
-    </>
+    </Suspense>
   );
 };
 

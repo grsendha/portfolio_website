@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Suspense } from "react";
 import { Tilt } from "react-tilt";
 import { motion } from "framer-motion";
 import { styles } from "../styles";
@@ -38,7 +38,7 @@ const ServiceCard = ({ index, title, icon }) => (
 
 const About = () => {
   return (
-    <>
+    <Suspense>
       <motion.div variants={textVariant()} className="mt-14">
         <p className={styles.sectionSubText}>Introduction</p>
         <h2 className={styles.heroHeadText}>Overview</h2>
@@ -66,7 +66,7 @@ const About = () => {
           <ServiceCard key={service.title} index={index} {...service} />
         ))}
       </div>
-    </>
+    </Suspense>
   );
 };
 

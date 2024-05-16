@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Suspense } from "react";
 import { Tilt } from "react-tilt";
 import { motion } from "framer-motion";
 import { styles } from "../styles";
@@ -30,7 +30,7 @@ const ProjectCard = ({
         <img
           src={image}
           alt={name}
-          className="w-full h-full object-cover rounded-2xl"
+          className="w-full h-[95%] object-center rounded-2xl"
         />
         <div className="absolute inset-0 flex justify-end m-3 card-img_hover">
           <div
@@ -62,7 +62,7 @@ const ProjectCard = ({
 
 const Works = () => {
   return (
-    <>
+    <Suspense>
       <motion.div variants={textVariant()} className="mt-14">
         <p className={`${styles.sectionSubText} `}>My Projects</p>
         <h2 className={`${styles.sectionHeadText} `}>Projects.</h2>
@@ -81,7 +81,7 @@ const Works = () => {
           <ProjectCard key={`project-${index}`} index={index} {...project} />
         ))}
       </div>
-    </>
+    </Suspense>
   );
 };
 

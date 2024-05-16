@@ -37,6 +37,15 @@ import {
   linkedina,
   linkedinb,
   resume,
+  banking,
+  discord,
+  githubmainpage,
+  portfolio,
+  twitter,
+  whatsapp,
+  airline,
+  travelapp,
+  sequelize,
 } from "../assets";
 
 export const resumeLink = resume;
@@ -125,14 +134,26 @@ const frameworks = [
     icon: tailwind,
   },
   {
+    name: "Express",
+    icon: "https://icongr.am/devicon/express-original.svg?size=148&color=ffffff",
+  },
+  {
     name: "Next JS",
-    icon: nextjs,
+    icon: "https://devicon-website.vercel.app/api/nextjs/original.svg?color=%23FFFFFF",
+  },
+  {
+    name: "Sequelize",
+    icon: sequelize,
   },
 ];
 const tools = [
   {
     name: "Node JS",
     icon: nodejs,
+  },
+  {
+    name: "VS Code",
+    icon: "https://devicon-website.vercel.app/api/vscode/original.svg",
   },
   {
     name: "git",
@@ -187,96 +208,163 @@ const experiences = [
   },
 ];
 
-const testimonials = [
-  {
-    testimonial:
-      "I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.",
-    name: "Sara Lee",
-    designation: "CFO",
-    company: "Acme Co",
-    image: "https://randomuser.me/api/portraits/women/4.jpg",
-  },
-  {
-    testimonial:
-      "I've never met a web developer who truly cares about their clients' success like Rick does.",
-    name: "Chris Brown",
-    designation: "COO",
-    company: "DEF Corp",
-    image: "https://randomuser.me/api/portraits/men/5.jpg",
-  },
-  {
-    testimonial:
-      "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
-    name: "Lisa Wang",
-    designation: "CTO",
-    company: "456 Enterprises",
-    image: "https://randomuser.me/api/portraits/women/6.jpg",
-  },
-];
-
 const projects = [
   {
-    name: "Car Rent",
+    name: "Airline API",
     description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+      "This project is a microservice-based architecture designed to manage various functionalities of an airline booking system.",
     tags: [
       {
-        name: "react",
+        name: "node.js",
         color: "blue-text-gradient",
+      },
+      {
+        name: "mysql",
+        color: "green-text-gradient",
+      },
+      {
+        name: "express",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: airline,
+    source_code_link: "https://github.com/grsendha/Airline-API",
+  },
+  {
+    name: "Twitter API",
+    description: "Twitter API for post and comments like and many more",
+    tags: [
+      {
+        name: "node.js",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "javascript",
+        color: "green-text-gradient",
       },
       {
         name: "mongodb",
-        color: "green-text-gradient",
-      },
-      {
-        name: "tailwind",
         color: "pink-text-gradient",
       },
     ],
-    image: carrent,
-    source_code_link: "https://github.com/",
+    image: twitter,
+    source_code_link: "https://github.com/grsendha/TwitterAPI",
   },
   {
-    name: "Job IT",
+    name: "Finance Banking App",
     description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+      "This app features ultra-secure SSR authentication and Plaid integration for linking bank accounts.",
     tags: [
       {
-        name: "react",
+        name: "next.js",
         color: "blue-text-gradient",
       },
       {
-        name: "restapi",
+        name: "typescript",
         color: "green-text-gradient",
       },
       {
-        name: "scss",
+        name: "appwrite",
         color: "pink-text-gradient",
       },
     ],
-    image: jobit,
-    source_code_link: "https://github.com/",
+    image: banking,
+    source_code_link: "https://github.com/grsendha/banking-app",
   },
   {
-    name: "Trip Guide",
-    description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+    name: "Whatsapp X Gemini",
+    description: "This is a whatsapp like app which has feature of GEMINI AI",
     tags: [
       {
-        name: "nextjs",
+        name: "next.js",
         color: "blue-text-gradient",
       },
       {
-        name: "supabase",
+        name: "typescript",
         color: "green-text-gradient",
       },
       {
-        name: "css",
+        name: "convex",
         color: "pink-text-gradient",
       },
     ],
-    image: tripguide,
-    source_code_link: "https://github.com/",
+    image: whatsapp,
+    source_code_link: "https://github.com/grsendha/whatsapp",
+  },
+  {
+    name: "Portfolio",
+    description: "This is the Portfolio",
+    tags: [
+      {
+        name: "react.js",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "javascript",
+        color: "green-text-gradient",
+      },
+    ],
+    image: portfolio,
+    source_code_link: "https://github.com/grsendha/portfolio_website",
+  },
+
+  {
+    name: "Github Like App",
+    description:
+      "This app use github app to fetch repo and show it in a beautiful way",
+    tags: [
+      {
+        name: "react.js",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "node.js",
+        color: "green-text-gradient",
+      },
+      {
+        name: "express",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: githubmainpage,
+    source_code_link: "https://github.com/grsendha/Github-App",
+  },
+  {
+    name: "Discord Bot For Pdf Converter",
+    description:
+      "This bot help to convert pdf files and vice versa and other many features are there",
+    tags: [
+      {
+        name: "node.js",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "javascript",
+        color: "green-text-gradient",
+      },
+      {
+        name: "discord.js",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: discord,
+    source_code_link: "https://github.com/grsendha/discord-bot-pdfConverter",
+  },
+  {
+    name: "Travel Agency Landing Page",
+    description: "Fully responsive landing page",
+    tags: [
+      {
+        name: "next.js",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "typescript",
+        color: "green-text-gradient",
+      },
+    ],
+    image: travelapp,
+    source_code_link: "https://github.com/grsendha/travel-app",
   },
 ];
 
@@ -287,6 +375,5 @@ export {
   frameworks,
   languages,
   experiences,
-  testimonials,
   projects,
 };

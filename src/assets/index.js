@@ -46,8 +46,27 @@ import linkedina from "./linkedin-a.svg";
 import linkedinb from "./linkedin-b.png";
 
 import resume from "./cv/gyanaranjan-resume.pdf";
+import airline from "./airline.png";
+import banking from "./banking.png";
+import discord from "./discord.png";
+import githubmainpage from "./githubmainpage.png";
+import portfolio from "./portfolio.png";
+import twitter from "./twitter.png";
+import whatsapp from "./whatsapp.png";
+import travelapp from "./travelapp.png";
+
+import sequelize from "./tech/sequelize.svg";
 
 export {
+  sequelize,
+  travelapp,
+  airline,
+  banking,
+  discord,
+  githubmainpage,
+  portfolio,
+  twitter,
+  whatsapp,
   resume,
   logo,
   creator,
